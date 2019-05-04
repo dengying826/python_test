@@ -1,0 +1,55 @@
+# 从键盘赋值"""
+first_num = input("请输入第一个操作数：")
+operation = input("请输入操作符：")
+second_num = input("请输入第二个操作数：")
+result = 0
+
+# 判断输入的是浮input点数还是整数，并转换
+if '.' in first_num:
+    first_num = float(first_num)
+else:
+    first_num = int(first_num)
+if '.' in second_num:
+    second_num = float(second_num)
+else:
+    second_num = int(second_num)
+
+# 根据操作符进行运算
+if operation == '+':
+    result = first_num + second_num
+elif operation == '-':
+    result = first_num - second_num
+elif operation == '*':
+    result = first_num * second_num
+elif operation == '/':
+    result = first_num / second_num
+elif operation == '%':
+    result = first_num % second_num
+elif operation == '//':
+    result =first_num // second_num
+elif operation == '**':
+    result = first_num ** second_num
+elif operation =='+=':
+    first_num += second_num
+    result = first_num
+elif operation == '-=':
+    first_num -= second_num
+    result = first_num
+elif operation == '*=':
+    first_num *= second_num
+    result = first_num
+elif operation == '/=':
+    first_num /= second_num
+    result = first_num
+elif operation == '%=':
+    first_num %= second_num
+    result = first_num
+elif operation == '//=':
+    first_num //= second_num
+    result = first_num
+elif operation == '**=':
+    first_num **= second_num
+    result = first_num
+
+# 输出结果
+print(result)
